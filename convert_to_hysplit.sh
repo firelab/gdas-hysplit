@@ -2,10 +2,10 @@
 
 cnv=/opt/hysplit4/exec/api2arl_v4
 #last_file=
-last_file=ncep_global_ssi.2017071918/gdas1.t18z.pgrb2.0p25.f005
+last_file=ncep_global_ssi.2017081918/gdas1.t18z.pgrb2.0p25.f005
 
 for d_i in $(seq -f "%02.f" 20 31) ; do 
-    for d in $(ls -d ncep_global_ssi.201707${d_i}??) ; do
+    for d in $(ls -d ncep_global_ssi.201708${d_i}??) ; do
         timestamp=$(echo $d | cut -c 17-) 
         for i_f in {0..5} ; do 
             f=$(ls $d/gdas.t??z.pgrb2.0p25.f00$i_f)
